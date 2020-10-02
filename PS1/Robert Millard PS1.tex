@@ -1,0 +1,113 @@
+\documentclass{article}
+
+\title{Giovanni Gallipoli Meeting.}
+\author{By Robert Millard\footnote{Ph.D. Candidate, The University of Western Ontario.}\\
+Working Paper [Please do not cite or circulate]. }
+
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{mathtools}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{mathbbol}
+\usepackage{bm}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{subfloat}
+\usepackage{rotating}
+\usepackage{adjustbox}
+\usepackage[normalem]{ulem}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\useunder{\uline}{\ul}{}
+
+\setlength{\parindent}{0pt}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\pdfmapfile{+sansmathaccent.map}
+
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+
+\graphicspath{ {Images/} }
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 1}
+A competitive equilibirum is a set of prices, $\{w_{t}, r_{t}\}_{t=0}^{\infty}$ and allocations $\{c_{t}, k_{t+1}, l_{t} \}_{t=0}^{\infty}$ such that 
+\begin{enumerate}
+\item Given prices, $\{w_{t}, r_{t}\}_{t=0}^{\infty}$ , the allocation, $\{c_{t}, k_{t+1}, l_{t} \}_{t=0}^{\infty}$, solves
+\begin{align}
+&\underset{c_{t}, k_{t+1}}{max} \underset{t=0}{\overset{\infty}{\sum}} \beta^{t} u (c_{t})\\
+\text{s.t. }& c_{t} + k_{t+1} \leq r_{t}k_{t} + w_{t}l_{t}, \forall t\\
+& c_{t}, k_{t}, l_{t} \geq 0, k_{0} \text{ given}.
+\end{align}
+
+\item Given prices, $\{ w_{t}, r_{t}\}_{t=0}^{\infty}$ , the allocation $\{k_{t+1}, l_{t} \}_{t=0}^{\infty}$, solves 
+\begin{align}
+&\underset{l_{t}, k_{t}}{max}\underset{t=0}{\overset{\infty}{\sum}} (y_{t} - w_{t}l_{t} - r_{t}k_{t})\\
+\text{s.t. }& y_{t} =  F(k_{t},l_{t}) \\
+&y_{t}, k_{t}, l_{t} \geq 0
+\end{align}
+\item Markets clear: $l_{t} = 1$ and $c_{t} + k_{t+1} = F(k_{t}, 1)$
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 2}
+\begin{align}
+&\underset{c_{t}, k_{t+1}}{max} \underset{t=0}{\overset{\infty}{\sum}} \beta^{t} u (c_{t}) \\
+\text{ s.t. } &k_{t+1} = F(k_{t},1) - c_{t},\\
+ &k_{t} \geq 0, c_{t} \geq 0,  k_{0} \text{ given},  
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Question 3}
+As leisure is not in the utility function, consumers allocate all time to work, $l_{t} = 1$, for the competive equilibrium and the social planners problem. \\
+$~$\\
+Competitive Equilibrium:
+\begin{enumerate}
+\item Firms problem: Sub in production constraint and take the FOC with respect to capital in period t to obtain
+\begin{align}
+r_{t} =  F_{k}(k_{t},1)
+\end{align}
+\item Consumers problem: Sub in the constraint for consumption and take FOC with respect to capital in period t to obtain
+\begin{align}
+u_{c}(c_{t}) = \beta u(c_{t+1})r_{t}
+\end{align}
+Now sub in (10) for $r_{t}$ to obtain
+\begin{align}
+u_{c}(c_{t}) = \beta u(c_{t+1}) F_{k}(k_{t},1)
+\end{align}
+\end{enumerate}
+Social Planners Problem:  Sub the constraint in and take the FOC with respect to capital to directly obtain
+\begin{align}
+u_{c}(c_{t}) = \beta u(c_{t+1}) F_{k}(k_{t},1),
+\end{align}
+which is the same equilibrium condition as the competitive case, hence the allocatuions for $\{c, k, l\}$ are the same in both cases. (maybe write only in terms of k, then mention budget/ feasiblitly implies consumption is same in both cases)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Question 4}
+The planners dynamic programming problem is, 
+\begin{align}
+&V(k_{t}) = \underset{ k_{t+1}}{\text{max}} ~u(F(k_{t}, 1) - k_{t+1}) + \beta V(k_{t+1})\\
+\text{ s.t. } &k_{t} \geq 0, F(k_{t}, 1) - k_{t+1} \geq 0,  k_{0} \text{ given},  
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Question 5}
+\begin{align}
+&V(k_{t}) = \underset{ k_{t+1}}{\text{max}}~ log(zk_{t}^{\alpha} - k_{t+1}) + \beta V(k_{t+1})\\
+\text{ s.t. } &k_{t} \geq 0, zk^{\alpha}  - k_{t+1} \geq 0,  k_{0} \text{ given},  
+\end{align}
+Take FOC w.r.t $k_{t+1}$ to obtain
+\begin{align}
+d
+\end{align}
+
+\end{document}
